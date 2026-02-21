@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Po-Wei Huang | Portfolio</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #111827;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+section {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+.skills span {
+    display: inline-block;
+    background: #e5e7eb;
+    padding: 6px 12px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #111827;
+    color: white;
+    margin-top: 60px;
+}
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+
+<body>
+
+<header style="display:flex; align-items:center; padding:60px 80px;">
+
+    <div style="flex:1; text-align:center;">
+
+        <h1 style="font-size:48px; margin-bottom:15px;">
+            Po-Wei Huang
+        </h1>
+
+        <p style="font-size:20px; margin:8px 0;">
+            Particle Physicist | Data Scientist | Machine Learning Researcher
+        </p>
+
+        <p style="font-size:20px; margin-top:15px;">
+            Email: po-wei.huang@physics.ox.ac.uk
+        </p>
+
+    </div>
+
+    <img src="../images/headshot.jpeg"
+         alt="Headshot"
+         style="width:220px; height:220px; object-fit:cover; border-radius:16px;">
+</header>
+
+<section>
+    <h2>Research Profile</h2>
+    <p>
+        PhD researcher in Particle Physics at the University of Oxford and member of the SNO+ collaboration, 
+        contributing to reactor antineutrino measurements, detector calibration, and background modeling. 
+        My research centers on statistical inference, Bayesian optimization, and large-scale data analysis, developing scalable computational pipelines 
+        for parameter estimation and uncertainty quantification in high-dimensional experimental environments.
+    </p>
+    <div style="display:flex; justify-content:center; gap:40px; margin:30px 0;">
+
+        <img src="../images/snoplus.jpg" 
+            alt="snoplus" 
+            style="width:30%;">
+            <img src="../images/oxfordphys.jpg" 
+            alt="snoplus" 
+            style="width:30%; ">
+    <div>
+</section>
+
+<section>
+    <h2>Education</h2>
+
+    <div class="card">
+        <h3>PhD in Particle Physics — University of Oxford</h3>
+        <img src="../images/Oxford.svg" 
+         alt="Oxford" 
+         style="width:6%; position:absolute; top:20px; right:20px;margin:10px;">
+        <p>Oct 2023 – Present</p>
+        <p>SNO+ Experiment researcher focusing on neutrino physics, scintillation technology,
+        and statistical inference. St. Catherine College Scholarship recipient.</p>
+    </div>
+
+    <div class="card">
+        <h3>BSc in Physics — National Taiwan University</h3>
+        <img src="../images/ntu.jpg" 
+         alt="NTU" 
+         style="width:9%; position:absolute; top:20px; right:20px;margin:1px;">
+        <p>2018 – 2022 | GPA 3.95/4.30</p>
+        <p>1st rank (Spring 2022). Best Final Report in Quantum Mechanics.</p>
+    </div>
+</section>
+
+<section>
+    <h2>Selected Research Projects</h2>
+
+    <div class="card">
+        <h3>High-Dimensional Bayesian Optimization (PCA–TuRBO) (Ongoing)</h3>
+        <p>
+            Developed a PCA–TuRBO framework for continuous high-dimensional spectral
+            reconstruction and optimization. Implemented GPU-accelerated multi-output
+            TuRBO models in BoTorch and engineered automated pipelines for simulation
+            execution and hyperparameter tuning.
+        </p>
+    </div>
+
+    <div class="card" style="display:flex; justify-content:space-between; align-items:flex-start; gap:30px;">
+
+        <div style="flex:1;">
+            <h3>High-Dimensional Timing Calibration</h3>
+            <p>
+                Designed automated Bayesian optimization pipeline using HTCondor, Python,
+                BoTorch and PyTorch for calibrating scintillator-based sensor systems.
+                Reduced calibration time from one week to one day (~7× speedup).
+            </p>
+
+            <a href="https://github.com/Po-WeiHuang/scinttiming_bayesian_opti" target="_blank">
+                Scintillation Timing Tuning
+            </a>
+        </div>
+
+        <img src="../images/BOTiming.png"
+            alt="Timing Optimization"
+            style="width:220px; border-radius:8px; flex-shrink:0;">
+    </div>
+
+    <div class="card" style="display:flex; justify-content:space-between; align-items:flex-start; gap:30px;">
+        <h3>Reactor Antineutrino Analysis</h3>
+        <p>
+            Built likelihood-based models for sparse, low-signal datasets.
+            Processed 10+ TB structured detector data with scalable Python/C++ pipelines.
+            Modeled statistical and systematic uncertainties for unbiased parameter inference.
+        </p>
+        <img src="../images/meinreactorana.png"
+            alt="Timing Optimization"
+            style="width:220px; border-radius:8px; flex-shrink:0;">
+    </div>
+    
+    <div class="card"></div>
+        <h3>Atmospheric Neutrino Rare-Event Analysis</h3>
+        <p>
+            Developed simulation-based evaluation strategies under rare-event and
+            class-imbalanced conditions. Provided first estimation of atmospheric
+            event rates within SNO+.
+        </p>
+    </div>
+    <div class="card">
+        <h3>Nuclear Background Analysis — Automated Monitoring & Anomaly Tracking</h3>
+        <p>
+            Built scalable Python/C++ workflows for time-series modeling of nuclear background chains, integrated
+            SQL-based data management for efficient querying and processing of detector data, and implemented
+            automated statistical monitoring and anomaly detection tools to support continuous data-quality validation.
+            These systems enabled real-time tracking of background signatures and rapid identification of detector
+            anomalies.
+        </p>
+        <a href="https://github.com/Po-WeiHuang/BiPoTagging" target="_blank">
+            BiPoTagging
+        </a>
+    </div>
+
+</section>
+
+<section>
+    <h2>Publications</h2>
+    <div class="card">
+        <p>
+            • <a href="https://arxiv.org/abs/2511.11856" target="_blank">
+            Measurement of reactor antineutrino oscillations with 1.46 ktonne-years of data at SNO+
+            </a>, arXiv (2025)
+        </p>
+
+        <p>
+            • <a href="https://link.springer.com/article/10.1140/epjc/s10052-024-13687-5" target="_blank">
+            Initial Measurement of reactor antineutrino oscillation in SNO+
+            </a>, European Physical Journal C (2025)
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>Core Skills</h2>
+    <div class="skills">
+        <span>Bayesian Optimization</span>
+        <span>Statistical Inference</span>
+        <span>Python</span>
+        <span>C++</span>
+        <span>PyTorch</span>
+        <span>BoTorch</span>
+        <span>Machine Learning</span>
+        <span>Large-Scale Data</span>
+        <span>GPU Parallel Computing</span>
+        <span>ROOT / RooFit</span>
+        <span>HTCondor</span>
+        <span>Linux</span>
+        <span>Git</span>
+        <span>Nuclear Physics</span>
+        <span>Particle Physics</span>
+    </div>
+</section>
+
+<section>
+    <h2>Work Experience</h2>
+    <div class="card">
+        <h3>Visiting Scientist — SNOLAB (2025)</h3>
+        <p>Conducted optical and sensor measurements underground; detector monitoring shifts.</p>
+    </div>
+
+    <div class="card">
+        <h3>Nuclear Physics Lab Demonstrator — Oxford (2024–2025)</h3>
+        <img src="../images/oxfordphysstudents.png" 
+         alt="Oxford" 
+         style="width:20%; position:absolute; top:0px; right:20px;margin:0px;">
+        <p>Guided experiments, software debugging, and assessed lab work.</p>
+    </div>
+    <div class="card">
+        <h3>British Olympiad Marker (2024)</h3>
+    </div>
+    <div class="card">
+        <h3>Teaching Assistant — NTU (2021)</h3>
+        <p>Delivered tutorials in modern particle physics; graded coursework and exams.</p>
+    </div>
+</section>
+
+<section>
+    <h2>Side Projects</h2>
+    <div class="card">
+        <h3>Custom Geiger Tube Array for Cosmic Muon Measurement</h3>
+        <p>Designed and soldered custom PCB layouts, integrating Geiger 
+        tubes for muon detection to experimentally investigate the West–East Effect and Zenith Angle Dependence.
+    </p>
+        
+        <div style="display:flex; justify-content:center; gap:40px; margin:30px 0;"></div>
+            <img src="../images/geiger.png"
+            alt="geiger"
+            style="width:30%; border-radius:8px;">
+
+            <img src="../images/zenithdep.png"
+            alt="zenithdep"
+            style="width:30%; border-radius:8px;">
+        </div>
+    </div>
+    
+    <div class="card">
+        <h3>Atmospheric Muon Simulation</h3>
+        <p>
+        Developed a custom atmospheric muon generator to simulate secondary particle
+        production from cosmic-ray air showers resulting from primary particle
+        interactions with atmospheric nuclei.
+        </p>
+    </div>
+
+    <div class="card">
+    <h3>3D Particle–Mesh N-Body Gravitational Simulation</h3>
+        <p>
+        Developed a parallelized C++ N-body simulation that solves the Poisson
+        equation using FFT-based spectral methods and evolves particle dynamics
+        with a symplectic leapfrog integrator (KDK). Implemented CIC/TSC mass
+        assignment schemes with OpenMP multi-threading for scalable performance.
+        </p>
+        <p>
+        <strong>GitHub:</strong>
+        <a href="https://github.com/Po-WeiHuang/Astronomy_Final_Project" target="_blank">
+            N-Body Gravitational Simulation
+        </a>
+        </p>
+    </div>
+
+<section>
+
+<footer>
+    © 2026 Po-Wei Huang
+</footer>
+
+</body>
+</html>
