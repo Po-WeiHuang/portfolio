@@ -6,62 +6,112 @@
 <title>Po-Wei Huang | Portfolio</title>
 
 <style>
+:root {
+    --navy: #0b1220;
+    --ink: #1c2530;
+    --muted: #566073;
+    --accent: #2563eb;
+    --accent-light: #eaf0ff;
+    --bg: #f6f7fb;
+    --card-bg: #ffffff;
+    --border: #e3e6ec;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     margin: 0;
-    background: #f4f6f8;
-    color: #333;
-    line-height: 1.6;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+    font-size: 18px;
 }
 
 header {
-    background: #111827;
+    background: var(--navy);
     color: white;
-    padding: 50px 20px;
-    text-align: center;
 }
 
 section {
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 0 20px;
+    width: 80%;
+    margin: 80px auto;
 }
 
 h2 {
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 14px;
+    margin-bottom: 34px;
+    color: var(--navy);
+}
+
+h3 {
+    font-size: 23px;
+    font-weight: 650;
+    color: var(--navy);
+    margin: 0 0 12px 0;
+}
+
+p {
+    color: var(--muted);
+    font-size: 19px;
+}
+
+ul {
+    padding-left: 26px;
+    margin: 0;
+}
+
+ul li {
+    font-size: 19px;
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+.card ul {
+    margin-top: 6px;
 }
 
 .card {
-    background: white;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    background: var(--card-bg);
+    padding: 36px 42px;
+    margin: 28px 0;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
     position: relative;
 }
 
 .skills span {
     display: inline-block;
-    background: #e5e7eb;
-    padding: 6px 12px;
-    margin: 5px;
-    border-radius: 20px;
-    font-size: 14px;
+    background: var(--accent-light);
+    color: var(--accent);
+    border: 1px solid #c7d7fe;
+    padding: 9px 18px;
+    margin: 6px;
+    border-radius: 999px;
+    font-size: 15.5px;
+    font-weight: 600;
 }
 
 footer {
     text-align: center;
-    padding: 25px;
-    background: #111827;
-    color: white;
-    margin-top: 60px;
+    padding: 32px;
+    background: var(--navy);
+    color: #9aa5b1;
+    margin-top: 80px;
+    font-size: 15px;
 }
 
 a {
-    color: #2563eb;
+    color: var(--accent);
     text-decoration: none;
+    font-weight: 500;
 }
 
 a:hover {
@@ -72,54 +122,57 @@ a:hover {
 
 <body>
 
-<header style="display:flex; align-items:center; padding:60px 80px;">
+<header>
+    <div style="width:80%; margin:0 auto; padding:80px 0; display:flex; align-items:center; justify-content:space-between; gap:56px;">
 
-    <div style="flex:1; text-align:center;">
+        <div style="flex:1;">
 
-        <h1 style="font-size:48px; margin-bottom:15px;">
-            Po-Wei Huang
-        </h1>
+            <p style="font-size:18px; letter-spacing:2px; text-transform:uppercase; color:#93c5fd; margin:0 0 16px 0; font-weight:700;">
+                Machine Learning Researcher
+            </p>
 
-        <p style="font-size:20px; margin:8px 0;">
-            Particle Physicist | Data Scientist | Machine Learning Researcher
-        </p>
+            <h1 style="font-size:58px; margin:0 0 16px 0; font-weight:700; letter-spacing:-1.5px;">
+                Po-Wei Huang
+            </h1>
 
-        <p style="font-size:20px; margin-top:15px;">
-        Email: <a href="mailto:po-wei.huang@physics.ox.ac.uk">
-        po-wei.huang@physics.ox.ac.uk
-            </a>
-        </p>
+            <p style="font-size:22px; margin:0 0 28px 0; color:#cbd5e1; font-weight:400;">
+                PhD Candidate in Particle Physics, University of Oxford — LLM & AI-for-Science Research
+            </p>
 
-        <p style="font-size:20px; margin-top:15px;">
-            Github: <a href="https://github.com/Po-WeiHuang" target="_blank">
-                https://github.com/Po-WeiHuang
-            </a>
-        </p>
+            <p style="font-size:17px; margin:0; color:#e2e8f0;">
+                <a href="mailto:po-wei.huang@physics.ox.ac.uk" style="color:#93c5fd; font-weight:500;">
+                    po-wei.huang@physics.ox.ac.uk
+                </a>
+                &nbsp;&nbsp;·&nbsp;&nbsp;
+                <a href="https://github.com/Po-WeiHuang" target="_blank" style="color:#93c5fd; font-weight:500;">
+                    github.com/Po-WeiHuang
+                </a>
+            </p>
 
+        </div>
+
+        <img src="images/headshot.jpeg"
+             alt="Headshot"
+             style="width:200px; height:200px; object-fit:cover; border-radius:16px; flex-shrink:0;">
     </div>
-
-    <img src="images/headshot.jpeg"
-         alt="Headshot"
-         style="width:220px; height:220px; object-fit:cover; border-radius:16px;">
 </header>
 
 <section>
     <h2>Research Profile</h2>
-    <p>
-        PhD researcher in Particle Physics at the University of Oxford and member of the SNO+ collaboration, 
-        contributing to reactor antineutrino measurements, detector calibration, and background modeling. 
-        My research centers on statistical inference, Bayesian optimization, and large-scale data analysis, developing scalable computational pipelines 
-        for parameter estimation and uncertainty quantification in high-dimensional experimental environments.
-    </p>
+    <ul>
+        <li>PhD researcher in Particle Physics at the University of Oxford and member of the SNO+ collaboration, contributing to reactor antineutrino measurements, detector calibration, and background modeling.</li>
+        <li>Research centers on statistical inference, Bayesian optimization, and large-scale data analysis, developing scalable computational pipelines for parameter estimation and uncertainty quantification in high-dimensional experimental environments.</li>
+        <li>More recently, developing LLM and AI-for-science methods, including self-distillation and multi-token prediction for faster, more coherent LLM inference.</li>
+    </ul>
     <div style="display:flex; justify-content:center; gap:40px; margin:30px 0;">
 
         <img src="images/snoplus.jpg" 
             alt="snoplus" 
             style="width:30%;">
-            <img src="images/oxfordphys.jpg" 
-            alt="snoplus" 
+            <img src="images/oxfordphys.jpg"
+            alt="snoplus"
             style="width:30%; ">
-    <div>
+    </div>
 </section>
 
 <section>
@@ -149,24 +202,32 @@ a:hover {
     <h2>Selected Research Projects</h2>
 
     <div class="card">
-        <h3>High-Dimensional Bayesian Optimization (PCA–TuRBO) (Ongoing)</h3>
-        <p>
-            Developed a PCA–TuRBO framework for continuous high-dimensional spectral
-            reconstruction and optimization. Implemented GPU-accelerated multi-output
-            TuRBO models in BoTorch and engineered automated pipelines for simulation
-            execution and hyperparameter tuning.
-        </p>
+        <h3>Drift-Regularized Multi-Token Prediction for LLM Inference (Ongoing)</h3>
+        <ul>
+            <li>Collaborating with a Senior Research Engineer at MediaTek on distribution-level regularization for online self-distilled multi-token prediction (MTP), improving coherent parallel token generation beyond one-to-one representation matching.</li>
+            <li>Designed controlled ablations across MTP-only, MTP + MSE, and MTP + drift objectives.</li>
+            <li>Built a student–teacher evaluation suite using KL divergence, Expected Calibration Error (ECE), and Wasserstein/Sinkhorn distance.</li>
+            <li>Reproduced and extended an open-source LitGPT/PyTorch MTP stack with FSDP distributed GPU training and SLURM-based experimentation.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Transformer-Based Position & Energy Reconstruction</h3>
+        <ul>
+            <li>Developed a Transformer regression model for sensor position and energy estimation, outperforming classical likelihood-based reconstruction in precision.</li>
+            <li>Implemented variable-length attention so the model processes only the available sensor inputs rather than a fixed maximum length.</li>
+            <li>Engineered a streaming PyTorch IterableDataset/Uproot pipeline enabling training on multi-terabyte datasets without full in-memory loading.</li>
+        </ul>
     </div>
 
     <div class="card" style="display:flex; justify-content:space-between; align-items:flex-start; gap:30px;">
 
         <div style="flex:1;">
             <h3>High-Dimensional Timing Calibration</h3>
-            <p>
-                Designed automated Bayesian optimization pipeline using HTCondor, Python,
-                BoTorch and PyTorch for calibrating scintillator-based sensor systems.
-                Reduced calibration time from one week to one day (~7× speedup).
-            </p>
+            <ul>
+                <li>Designed an automated Bayesian optimization pipeline using HTCondor, Python, BoTorch, and PyTorch for calibrating scintillator-based sensor systems.</li>
+                <li>Reduced calibration time from one week to one day (~7× speedup).</li>
+            </ul>
 
             <a href="https://github.com/Po-WeiHuang/scinttiming_bayesian_opti" target="_blank">
                 Scintillation Timing Tuning
@@ -179,34 +240,27 @@ a:hover {
     </div>
 
     <div class="card" style="display:flex; justify-content:space-between; align-items:flex-start; gap:30px;">
-        <h3>Reactor Antineutrino Analysis</h3>
-        <p>
-            Built likelihood-based models for sparse, low-signal datasets.
-            Processed 10+ TB structured detector data with scalable Python/C++ pipelines.
-            Modeled statistical and systematic uncertainties for unbiased parameter inference.
-        </p>
+        <div style="flex:1;">
+            <h3>Reactor Antineutrino Analysis</h3>
+            <ul>
+                <li>Built likelihood-based models for sparse, low-signal datasets.</li>
+                <li>Processed 10+ TB of structured detector data with scalable Python/C++ pipelines.</li>
+                <li>Modeled statistical and systematic uncertainties for unbiased parameter inference.</li>
+            </ul>
+        </div>
         <img src="images/meinreactorana.png"
             alt="Timing Optimization"
             style="width:220px; border-radius:8px; flex-shrink:0;">
     </div>
-    
-    <div class="card"></div>
-        <h3>Atmospheric Neutrino Rare-Event Analysis</h3>
-        <p>
-            Developed simulation-based evaluation strategies under rare-event and
-            class-imbalanced conditions. Provided first estimation of atmospheric
-            event rates within SNO+.
-        </p>
-    </div>
+
     <div class="card">
         <h3>Nuclear Background Analysis — Automated Monitoring & Anomaly Tracking</h3>
-        <p>
-            Built scalable Python/C++ workflows for time-series modeling of nuclear background chains, integrated
-            SQL-based data management for efficient querying and processing of detector data, and implemented
-            automated statistical monitoring and anomaly detection tools to support continuous data-quality validation.
-            These systems enabled real-time tracking of background signatures and rapid identification of detector
-            anomalies.
-        </p>
+        <ul>
+            <li>Built scalable Python/C++ workflows for time-series modeling of nuclear background chains.</li>
+            <li>Integrated SQL-based data management for efficient querying and processing of detector data.</li>
+            <li>Implemented automated statistical monitoring and anomaly detection tools to support continuous data-quality validation.</li>
+            <li>Enabled real-time tracking of background signatures and rapid identification of detector anomalies.</li>
+        </ul>
         <a href="https://github.com/Po-WeiHuang/BiPoTagging" target="_blank">
             BiPoTagging
         </a>
@@ -249,6 +303,12 @@ a:hover {
         <span>Git</span>
         <span>Nuclear Physics</span>
         <span>Particle Physics</span>
+        <span>LLM Fine-Tuning</span>
+        <span>Self-Distillation</span>
+        <span>Multi-Token Prediction</span>
+        <span>Transformers</span>
+        <span>FSDP / SLURM</span>
+        <span>Hugging Face</span>
     </div>
 </section>
 
@@ -279,11 +339,12 @@ a:hover {
     <h2>Side Projects</h2>
     <div class="card">
         <h3>Custom Geiger Tube Array for Cosmic Muon Measurement</h3>
-        <p>Designed and soldered custom PCB layouts, integrating Geiger 
-        tubes for muon detection to experimentally investigate the West–East Effect and Zenith Angle Dependence.
-    </p>
+        <ul>
+            <li>Designed and soldered custom PCB layouts integrating Geiger tubes for muon detection.</li>
+            <li>Experimentally investigated the West–East Effect and Zenith Angle Dependence.</li>
+        </ul>
         
-        <div style="display:flex; justify-content:center; gap:40px; margin:30px 0;"></div>
+        <div style="display:flex; justify-content:center; gap:40px; margin:30px 0;">
             <img src="images/geiger.png"
             alt="geiger"
             style="width:30%; border-radius:8px;">
@@ -296,21 +357,19 @@ a:hover {
     
     <div class="card">
         <h3>Atmospheric Muon Simulation</h3>
-        <p>
-        Developed a custom atmospheric muon generator to simulate secondary particle
-        production from cosmic-ray air showers resulting from primary particle
-        interactions with atmospheric nuclei.
-        </p>
+        <ul>
+            <li>Developed a custom atmospheric muon generator to simulate secondary particle production from cosmic-ray air showers.</li>
+            <li>Modeled primary particle interactions with atmospheric nuclei.</li>
+        </ul>
     </div>
 
     <div class="card">
     <h3>3D Particle–Mesh N-Body Gravitational Simulation</h3>
-        <p>
-        Developed a parallelized C++ N-body simulation that solves the Poisson
-        equation using FFT-based spectral methods and evolves particle dynamics
-        with a symplectic leapfrog integrator (KDK). Implemented CIC/TSC mass
-        assignment schemes with OpenMP multi-threading for scalable performance.
-        </p>
+        <ul>
+            <li>Developed a parallelized C++ N-body simulation that solves the Poisson equation using FFT-based spectral methods.</li>
+            <li>Evolved particle dynamics with a symplectic leapfrog integrator (KDK).</li>
+            <li>Implemented CIC/TSC mass assignment schemes with OpenMP multi-threading for scalable performance.</li>
+        </ul>
         <p>
         <strong>GitHub:</strong>
         <a href="https://github.com/Po-WeiHuang/Astronomy_Final_Project" target="_blank">
